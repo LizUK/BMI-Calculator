@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+        
+        <title>BMI calculator</title>
+        
+     </head>
+     
+     <body>
+     
+     	<section class="container-fluid">
+        
+                <h1>Calculate Your Body Mass Index</h1>
+                
+                <div class="row">
+                
+                    <div class="measurement col-12">
+                    
+                        <button type="button" class="click btn btn-primary btn-lg pressed" onClick="clickme(this)">Metric</button> <button type="button" class="click system btn btn-primary btn-lg" id="imperial" onClick="clickme(this)">Imperial</button> 
+                        
+                     </div>
+                     
+                      <div class="gender col-12">
+                    
+                        <button type="button" class="click btn btn-primary btn-lg" id="male" onClick="clickme2(this)"></button> <button type="button" class="click btn btn-primary btn-lg" id="female" onClick="clickme2(this)"></button>
+                        
+                     </div>
+                    
+                    <div class="form col-12">
+                    
+                        <form action="#" id="myForm" onSubmit="return bmiCalculator()" method="post">
+                            
+                                <label>Weight <span id="weight-measure">(KG)</span></label>
+                                <input type="number" name="weight" id="weight" placeholder="Your weight" min="1" max="900" step="1" value="80" required><br>
+                            
+                                <label>Height <span id="height-measure">(CM)</span></label>
+                                <input type="number" name="height" id="height" placeholder="Your height" min="1" max="900" step="1" value="150" required><br>
+                            
+                            
+                                <label>Age</label>
+                                <input type="number" name="age" placeholder="Your age" min="1" max="900" step="1" value="20" required><br>
+                            
+                            
+                            <button id="myBtn" type="submit"></button>
+                            <h3>Calculate BMI</h3>
+                        </form>
+                
+                    </div>
+                    
+              </div>
+     
+     	</section>
+     
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <section class="container-fluid">
+        
+                <h1>Your Current Body Mass Index is:</h1>
+                
+                <div class="row">
+                
+                    <div class="col col-md-10 col-lg-6 result-box">
+                                            
+                        <h4 id="result"></h4>
+                        
+                    </div>
+                    
+                    <div class="col col-12 info-box">
+                    
+                    	<div id="chart">
+                        
+                        </div>
+                        
+                        <div class="info-text">
+                        
+                            <!--<h6>Your suggested healthy weight range is <span id="idealWeight"></span> kg *</h6>-->
+                            <h6>Your current weight is <span id="recom"></span> the recommended weight for your size.</h6>
+                            
+                            <p class="cta"><a href="#"></a></p>
+                            
+                            <h4>Get a Meal Plan.</h4>
+                            
+                            <p class="first">*BMI is a useful measurement for people for most people over 18 years old. But it is only an esitmate and it doesn't take all factors into account. We reccomend you also check your waist measurement and other factors.</p>
+    
+                            <p>Speak to your doctor, An Accredited Practising Dietitian or a health practioner about your weight.</p>
+                            
+                            <p>**This calculator is not suitable for pregnant women or children.</p>
+                            
+                        </div>
+                        
+                    </div>
+                    
+              	</div>
+     
+     	</section>
+  </div>
+
+</div>
+	   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6bd5762926.js" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js.js"></script>
+    
+     </body>
+     
+</html>
